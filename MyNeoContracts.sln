@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyToken", "src\MyToken\MyToken.csproj", "{FA1120EE-C418-4A20-B23F-B42DC561ADFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyToken.Tests", "tests\MyToken.Tests\MyToken.Tests.csproj", "{CC1DB51F-1C47-4E5C-9CC3-C5919E5ADFC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Testnet|Any CPU = Testnet|Any CPU
+		Mainnet|Any CPU = Mainnet|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA1120EE-C418-4A20-B23F-B42DC561ADFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1120EE-C418-4A20-B23F-B42DC561ADFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1120EE-C418-4A20-B23F-B42DC561ADFF}.Testnet|Any CPU.ActiveCfg = Testnet|Any CPU
+		{FA1120EE-C418-4A20-B23F-B42DC561ADFF}.Testnet|Any CPU.Build.0 = Testnet|Any CPU
+		{FA1120EE-C418-4A20-B23F-B42DC561ADFF}.Mainnet|Any CPU.ActiveCfg = Mainnet|Any CPU
+		{FA1120EE-C418-4A20-B23F-B42DC561ADFF}.Mainnet|Any CPU.Build.0 = Mainnet|Any CPU
+		{CC1DB51F-1C47-4E5C-9CC3-C5919E5ADFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1DB51F-1C47-4E5C-9CC3-C5919E5ADFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1DB51F-1C47-4E5C-9CC3-C5919E5ADFC5}.Testnet|Any CPU.ActiveCfg = Testnet|Any CPU
+		{CC1DB51F-1C47-4E5C-9CC3-C5919E5ADFC5}.Testnet|Any CPU.Build.0 = Testnet|Any CPU
+		{CC1DB51F-1C47-4E5C-9CC3-C5919E5ADFC5}.Mainnet|Any CPU.ActiveCfg = Mainnet|Any CPU
+		{CC1DB51F-1C47-4E5C-9CC3-C5919E5ADFC5}.Mainnet|Any CPU.Build.0 = Mainnet|Any CPU
+	EndGlobalSection
+EndGlobal

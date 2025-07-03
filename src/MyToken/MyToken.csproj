@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<RootNamespace>MyToken</RootNamespace>
+		<Configurations>Debug;Testnet;Mainnet</Configurations>
+		<Platforms>AnyCPU</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Neo.SmartContract.Framework" Version="3.8.1" />
+	</ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+		<Exec Command="node $(ProjectDir)build.js modify unittests" Condition="'$(Configuration)' == 'Debug'" />
+		<Exec Command="node $(ProjectDir)build.js modify testnet" Condition="'$(Configuration)' == 'Testnet'" />
+		<Exec Command="node $(ProjectDir)build.js modify mainnet" Condition="'$(Configuration)' == 'Mainnet'" />
+	</Target>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="dotnet nccs &quot;$(MSBuildProjectFile)&quot; --generate-artifacts all -d" />
+		<Exec Command="node $(ProjectDir)build.js revert" />
+		<Exec Command="node $(ProjectDir)build.js clean" />
+		<Exec Command="node $(ProjectDir)build.js copy" />
+	</Target>
+</Project>
