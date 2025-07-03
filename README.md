@@ -4,7 +4,7 @@ This project is an example of a smart contract project using the Neo blockchain.
 
 ## Requirements
 
-- .NET 8
+- .NET 9
 - nodejs >= 18
 
 ## Setup
